@@ -490,6 +490,96 @@ a { text-decoration: none; color: inherit; }
   flex-wrap: wrap; gap: 8px; font-size: .8rem;
 }
 
+/* ─── PRIVACY PAGE ─────────────────────────────────── */
+.privacy-page { background: var(--soft); color: var(--green); padding-top: 78px; }
+.privacy-hero {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green2) 100%);
+  color: var(--white);
+  padding: 96px 0 72px;
+}
+.privacy-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  color: var(--gold);
+  line-height: 1.1;
+  margin: 18px 0 18px;
+}
+.privacy-hero p {
+  max-width: 760px;
+  color: rgba(242,242,242,.82);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+.privacy-updated {
+  display: inline-block;
+  margin-top: 26px;
+  color: rgba(242,242,242,.72);
+  font-size: .9rem;
+}
+.privacy-content { padding: 72px 0 96px; }
+.privacy-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+.privacy-summary {
+  position: sticky;
+  top: 110px;
+  background: var(--white);
+  border: 1px solid rgba(13,64,35,.12);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+.privacy-summary strong {
+  display: block;
+  color: var(--green);
+  font-size: .86rem;
+  margin: 20px 0 8px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.privacy-summary strong:first-child { margin-top: 0; }
+.privacy-summary p,
+.privacy-summary a {
+  color: #555;
+  font-size: .92rem;
+  line-height: 1.65;
+}
+.privacy-summary a:hover { color: var(--green); }
+.privacy-article {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: clamp(28px, 5vw, 56px);
+  box-shadow: var(--shadow);
+}
+.privacy-article h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--green);
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  margin: 34px 0 12px;
+}
+.privacy-article h2:first-child { margin-top: 0; }
+.privacy-article p,
+.privacy-article li {
+  color: #4f4f4f;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.privacy-article p + p { margin-top: 14px; }
+.privacy-article ul {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0 0 20px;
+}
+.privacy-article a {
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ─── WHATSAPP FLOAT ─────────────────────────────────── */
 .whatsapp-float {
   position: fixed; bottom: 28px; right: 28px; z-index: 999;
@@ -520,6 +610,8 @@ a { text-decoration: none; color: inherit; }
   .houses-grid { grid-template-columns: 1fr 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: span 2; }
+  .privacy-layout { grid-template-columns: 1fr; }
+  .privacy-summary { position: static; }
 }
 
 @media (max-width: 768px) {
@@ -541,6 +633,9 @@ a { text-decoration: none; color: inherit; }
   .footer-brand { grid-column: auto; }
   .valorization-banner { flex-direction: column; text-align: center; }
   .highlights-grid { grid-template-columns: 1fr 1fr; }
+  .privacy-page { padding-top: 70px; }
+  .privacy-hero { padding: 72px 0 56px; }
+  .privacy-content { padding: 48px 0 72px; }
 }
 
 @media (max-width: 480px) {
